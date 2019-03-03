@@ -1,0 +1,52 @@
+.policy-block {
+    text-align: center;
+    padding: 25px 5px;
+    margin-top: 30px;
+    background: #fff;
+    margin-bottom: 30px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.428571429;
+}
+.policy-block .inner {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 0 -5px;
+    grid-row-gap: 10px;
+}
+.policy-block .col {
+    padding: 0 5px;
+}
+.policy-block .box {
+    padding: 15px 0;
+    padding-left: 0px;
+    padding-left: 53px;
+    background: url(/assets/images/free_shipping.png) left center no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.policy-block .col:nth-child(2) .box {
+    background: url(/assets/images/support247.png) left center no-repeat;
+}
+.policy-block .col:nth-child(3) .box {
+    background: url(/assets/images/money_back.png) left center no-repeat;
+}
+.policy-block .col:nth-child(4) .box {
+    padding-left: 61px;
+    background: url(/assets/images/payment_secure.png) left center no-repeat;
+}
+.policy-block .box h4 {
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 0px;
+    margin-bottom: 4px;
+}
+.policy-block .box p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+}
