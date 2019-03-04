@@ -7,13 +7,15 @@ import { PageFooterComponent } from './components/page-footer/page-footer.compon
 import { ContentComponent } from './content/content.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { PolicyBlockComponent} from './components/policy-block/policy-block.component';
+import { NavmenuComponent } from './navmenu/navmenu.component';
 @NgModule({
   declarations: [
     AppComponent,
     PageFooterComponent,
     ContentComponent,
     PageHeaderComponent,
-    PolicyBlockComponent
+    PolicyBlockComponent,
+    NavmenuComponent
   ],
   imports: [
     BrowserModule,
