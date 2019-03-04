@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { PolicyBlockComponent} from './components/policy-block/policy-block.component';
+import { BannerComponent } from './banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
     PageFooterComponent,
     PageHeaderComponent,
-    PolicyBlockComponent
+    PolicyBlockComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
