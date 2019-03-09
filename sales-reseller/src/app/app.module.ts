@@ -15,7 +15,7 @@ import { BannerComponent } from './banner/banner.component';
     PageHeaderComponent,
     PolicyBlockComponent,
     NavmenuComponent,
-    BannerComponent
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
