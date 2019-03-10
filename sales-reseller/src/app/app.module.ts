@@ -8,6 +8,10 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 import { PolicyBlockComponent} from './components/policy-block/policy-block.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { BannerComponent } from './banner/banner.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { UserAgreeComponent } from './user-agree/user-agree.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +20,9 @@ import { BannerComponent } from './banner/banner.component';
     PolicyBlockComponent,
     NavmenuComponent,
     BannerComponent,
+    AboutUsComponent,
+    MainPageComponent,
+    UserAgreeComponent
   ],
   imports: [
     BrowserModule,
