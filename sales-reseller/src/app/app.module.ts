@@ -11,6 +11,7 @@ import { BannerComponent } from './banner/banner.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UserAgreeComponent } from './user-agree/user-agree.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserAgreeComponent } from './user-agree/user-agree.component';
     BannerComponent,
     AboutUsComponent,
     MainPageComponent,
-    UserAgreeComponent
+    UserAgreeComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
