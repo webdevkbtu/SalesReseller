@@ -12,7 +12,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UserAgreeComponent } from './user-agree/user-agree.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+<<<<<<< HEAD
 import { CollectionsComponent } from './collections/collections.component';
+=======
+import { ContactsComponent } from './contacts/contacts.component';
+import { HotComponent } from './hot/hot.component';
+>>>>>>> dffd51834bd7319a0ee2913b97afeedce41ae761
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { CollectionsComponent } from './collections/collections.component';
     MainPageComponent,
     UserAgreeComponent,
     ContactUsComponent,
+<<<<<<< HEAD
     CollectionsComponent
+=======
+    ContactsComponent,
+    HotComponent
+>>>>>>> dffd51834bd7319a0ee2913b97afeedce41ae761
   ],
   imports: [
     BrowserModule,
