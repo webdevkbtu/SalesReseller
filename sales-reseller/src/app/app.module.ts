@@ -12,6 +12,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UserAgreeComponent } from './user-agree/user-agree.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { HotComponent } from './hot/hot.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AboutUsComponent,
     MainPageComponent,
     UserAgreeComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ContactsComponent,
+    HotComponent
   ],
   imports: [
     BrowserModule,
