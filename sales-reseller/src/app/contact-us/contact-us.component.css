@@ -39,5 +39,8 @@ display: block;
 -webkit-margin-end: 0px;
 -webkit-padding-start: 40px;
 }
-
-
+.img-thumbnail{
+  margin: 20px 5px;
+  border: none;
+  background: transparent;
+}
