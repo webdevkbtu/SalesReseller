@@ -1,21 +1,261 @@
-<app-policy-block></app-policy-block>
-<app-banner></app-banner>
-<hr>
 <div class = "content">
-    <div class = "main-row">
-        <div class = "container">
-            <div class = "row">
-                <div class = "main-col col-sm-12 col-md-12">
-                    <div class = "row sub-row">
-                        <div id = "inside" class = "sub-col col-sm-12 col-md-12">
-                            <app-hot></app-hot>
-                            <div class="row">
-                              <app-collections></app-collections>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="main-row ">
+	    <div class="container">
+	        <div class="row">
+	            <div class="main-col col-sm-12 col-md-12">
+	                <div class="row sub-row">
+	                    <div class="sub-col col-sm-12 col-md-12">
+	                        <div id="ajax-login-block">
+	                        </div>
+	                        <div id="ajax-loader">
+	                            <img src="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/image/catalog/AjaxLoader.gif" alt="">
+	                        </div>
+	                        <div class="ajax-body-login">
+	                            <div class="account-login">
+	                                <div class="page-title">
+	                                    <h1>Login or create an account</h1>
+	                                    <a href="javascript:void(0);" class="a-close-frm" onclick="ocajaxlogin.closeForm();"><span>Close</span></a>
+	                                </div>
+	                                <div class="ajax-content">
+	                                    <div class="ajax-container">
+	                                        <div class="login-form-content">
+	                                            <h2>Returning Customer</h2>
+	                                            <p><strong>I am a returning customer</strong></p>
+	                                            <form action="#" method="post" id="ajax-login-form" enctype="multipart/form-data">
+	                                                <div class="form-group">
+	                                                    <label class="control-label" for="input-email">E-Mail Address</label>
+	                                                    <input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control">
+	                                                </div>
+	                                                <div class="form-group">
+	                                                    <label class="control-label" for="input-password">Password</label>
+	                                                    <input type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control">
+	                                                    <a class="forgotten" href="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/index.php?route=account/forgotten">Forgotten Password</a>
+	                                                </div>
+	                                                <div class="action">
+	                                                    <button class="button" type="button" onclick="ocajaxlogin.loginAction(document.getElementById('input-email').value, document.getElementById('input-password').value)"><span>Войти</span></button>
+	                                                    <button class="button" type="button" onclick="ocajaxlogin.appendRegisterForm()"><span>Create an account</span></button>
+	                                                    <img class="ajax-load-img" alt="" src="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/image/catalog/AjaxLoader.gif" width="30" height="30">
+	                                                </div>
+	                                            </form>
+	                                        </div>
+	                                    </div>
+
+	                                    <script>
+	                                        $(document).ready(function() {
+	                                                    var keycode = '';
+
+	                                                    $('#input-email').keypress(function(e) {
+	                                                        keycode = (e.keyCode ? e.keyCode : e.which);
+	                                                        if (keycode == '13') {
+	                                                            ocajaxlogin.loginAction(ocajaxlogin.loginAction(document.getElementById('input-email').value, document.getElementById('input-password').value));
+	                                                        }
+	                                                    });
+
+	                                                    truncated 733 bytes...
+	                                    </script>
+
+
+	                                </div>
+	                            </div>
+	                            <div class="account-register">
+	                                <div class="page-title">
+	                                    <h1>Login or create an account</h1>
+	                                    <a href="javascript:void(0);" class="a-close-frm" onclick="ocajaxlogin.closeForm();"><span>Close</span></a>
+	                                </div>
+	                                <div class="ajax-content">
+	                                    <div class="ajax-container">
+	                                        <div class="register-form-content">
+	                                            <h1>Register Account</h1>
+	                                            <p>If you already have an account with us, please login at the <a onclick="ocajaxlogin.appendLoginForm()" href="javascript:void(0);">login form</a>.</p>
+	                                            <form action="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/index.php?route=extension/module/ajaxregister" method="post" id="ajax-register-form" enctype="multipart/form-data" class="form-horizontal">
+	                                                <fieldset id="account">
+	                                                    <legend>Your Personal Details</legend>
+	                                                    <div class="form-group required" style="display:  none ;">
+	                                                        <label class="col-sm-2 control-label">Customer Group</label>
+	                                                        <div class="col-sm-10">
+	                                                            <div class="radio">
+	                                                                <label>
+	                    <input type="radio" name="customer_group_id" value="1" checked="checked">
+	                    Default</label>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="form-group required">
+	                                                        <label class="col-sm-2 control-label" for="input-firstname">First Name</label>
+	                                                        <div class="col-sm-10">
+	                                                            <input type="text" name="firstname" value="" placeholder="First Name" id="input-firstname" class="form-control">
+	                                                            <!-- Error First Name -->
+	                                                            <div class="for-error error-firstname"></div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="form-group required">
+	                                                        <label class="col-sm-2 control-label" for="input-lastname">Last Name</label>
+	                                                        <div class="col-sm-10">
+	                                                            <input type="text" name="lastname" value="" placeholder="Last Name" id="input-lastname" class="form-control">
+	                                                            <!-- Error Last Name -->
+	                                                            <div class="for-error error-lastname"></div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="form-group required">
+	                                                        <label class="col-sm-2 control-label" for="input-register-email">E-Mail</label>
+	                                                        <div class="col-sm-10">
+	                                                            <input type="email" name="email" value="" placeholder="E-Mail" id="input-register-email" class="form-control">
+	                                                            <!-- Error Email -->
+	                                                            <div class="for-error error-email"></div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="form-group required">
+	                                                        <label class="col-sm-2 control-label" for="input-telephone">Telephone</label>
+	                                                        <div class="col-sm-10">
+	                                                            <input type="tel" name="telephone" value="" placeholder="Telephone" id="input-telephone" class="form-control">
+	                                                            <!-- Error Phone -->
+	                                                            <div class="for-error error-telephone"></div>
+	                                                        </div>
+	                                                    </div>
+	                                                </fieldset>
+	                                                <fieldset>
+	                                                    <legend>Your Password</legend>
+	                                                    <div class="form-group required">
+	                                                        <label class="col-sm-2 control-label" for="input-register-password">Password</label>
+	                                                        <div class="col-sm-10">
+	                                                            <input type="password" name="password" value="" placeholder="Password" id="input-register-password" class="form-control">
+	                                                            <!-- Error Password -->
+	                                                            <div class="for-error error-password"></div>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="form-group required">
+	                                                        <label class="col-sm-2 control-label" for="input-confirm">Password Confirm</label>
+	                                                        <div class="col-sm-10">
+	                                                            <input type="password" name="confirm" value="" placeholder="Password Confirm" id="input-confirm" class="form-control">
+	                                                            <!-- Error Confirm Password -->
+	                                                            <div class="for-error error-confirm"></div>
+	                                                        </div>
+	                                                    </div>
+	                                                </fieldset>
+	                                                <fieldset>
+	                                                    <legend>Newsletter</legend>
+	                                                    <div class="form-group">
+	                                                        <label class="col-sm-2 control-label">Subscribe</label>
+	                                                        <div class="col-sm-10">
+	                                                            <label class="radio-inline">
+	                <input type="radio" name="newsletter" value="1">
+	                Да</label>
+	                                                            <label class="radio-inline">
+	                <input type="radio" name="newsletter" value="0" checked="checked">
+	                Нет</label>
+	                                                        </div>
+	                                                    </div>
+	                                                </fieldset>
+
+	                                                <div class="buttons">
+	                                                    <div class="pull-right">I have read and agree to the <a href="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/index.php?route=information/information/agree&amp;information_id=3" class="agree"><b>Договор публичной оферты</b></a>
+	                                                        <input type="checkbox" name="agree" value="1"> &nbsp;
+	                                                        <input type="button" onclick="ocajaxlogin.registerAction();" value="Продолжить" class="btn btn-primary">
+	                                                        <img class="ajax-load-img" alt="" src="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/image/catalog/AjaxLoader.gif" width="30" height="30">
+	                                                    </div>
+	                                                </div>
+	                                            </form>
+	                                        </div>
+	                                        <div class="alert alert-danger for-error error-warning"><i class="fa fa-exclamation-circle"></i><span></span></div>
+	                                    </div>
+	                                    <script>
+	                                        <!--
+	                                        // Sort the custom fields
+	                                        $('#account .form-group[data-sort]').detach().each(function() {
+	                                                    if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
+	                                                        $('#account .form-group').eq($(this).attr('data-sort')).before(this);
+	                                                    }
+
+	                                                    if ($(this).attr('data-sort') > $('#account .form-group').length) {
+	                                                        $('#a truncated 2186bytes...
+	                                    </script>
+	                                    <script>
+	                                        <!--
+	                                        $('button[id^=\'button-custom-field\']').on('click', function() {
+	                                                    var element = this;
+
+	                                                    $('#form-upload').remove();
+
+	                                                    $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+	                                                    $('#form-upload input[name=\'file\']').trigger('click');
+
+	                                                    if (typeof timer != 'undefined') {
+	                                                        truncated 1965 bytes...
+	                                    </script>
+	                                    <script>
+	                                        <!--
+	                                        $('.date').datetimepicker({
+	                                            language: document.cookie.match(new RegExp('language=([^;]+)'))[1],
+	                                            pickTime: false
+	                                        });
+
+	                                        $('.time').datetimepicker({
+	                                            language: document.cookie.match(new RegExp('language=([^;]+)'))[1],
+	                                            pickDate: false
+	                                        });
+
+	                                        $('.datetime').datetimepicker({
+	                                                    language: document.cookie.match(new RegExp('language=([^;]+)'))[1],
+	                                                    truncated 463 bytes...
+	                                    </script>
+	                                </div>
+	                            </div>
+	                            <div class="account-success">
+	                                <div class="ajax-content">
+	                                    <div class="ajax-container">
+	                                        <div class="success-content">
+	                                            <div class="page-title">
+	                                                <h1>Ваша учетная запись создана!</h1></div>
+	                                            <p>Спасибо за регистрацию в Aliado!</p>
+	                                            <p>Вы будете уведомлены по электронной почте, как только Ваш Личный Кабинет будет активирован администрацией магазина.</p>
+	                                            <p>Если у Вас есть какие-то вопросы, пожалуйста <a href="http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/contact">напишите нам</a>.</p>
+	                                            <div class="buttons">
+	                                                <div class="pull-right"><button class="button" onclick="window.location.href='http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/account'"><span>Продолжить</span></button></div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="logout-success">
+	                                <div class="ajax-content">
+	                                    <div class="ajax-container">
+	                                        <div class="success-content">
+	                                            <div class="page-title">
+	                                                <h1>Выход</h1></div>
+	                                            <p>Вы вышли из Личного Кабинета.</p>
+	                                            <p>Ваша корзина покупок была сохранена. Она будет восстановлена при следующем входе в Ваш Личный Кабинет.</p>
+	                                            <div class="buttons">
+	                                                <div class="pull-right"><button class="button" onclick="window.location.href='http://195.210.46.39/plesk-site-preview/aliado.kz/195.210.46.39/'"><span>Продолжить</span></button></div>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="opc-hidden">
+	                            <input type="hidden" id="input-opc-status" value="1">
+	                        </div>
+	                        <app-policy-block></app-policy-block>
+	                        <banner></banner>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>    
+	<div class="main-row ">
+	    <div class="container">
+	        <div class="row">
+	            <div class="main-col col-sm-12 col-md-12">
+	                <div class="row sub-row">
+	                    <div class="sub-col col-sm-12 col-md-12">
+	                        <app-hot></app-hot>
+	                        <app-collections></app-collections>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </div>
