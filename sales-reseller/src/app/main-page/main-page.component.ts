@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
+  //collBackImg: string[];
 
   constructor() { }
 
   ngOnInit() {
+    //collBackImg = ["/assets/images/winter.jpg","/assets/images/krosy.jpg","/assets/images/posuda.jpg"];
   }
 
 }

@@ -21,7 +21,7 @@ body ::-webkit-scrollbar
 
 body ::-webkit-scrollbar-thumb
 {
-	background-color: #ddd;	
+	background-color: #ddd;
 	border-radius: 0;
 }
 
@@ -381,6 +381,7 @@ html[xmlns] .oc-banner7-container .slides {
     line-height: 1.1;
     padding: 0;
     margin-bottom: 25px;
+		z-index: 100;
 }
 
 .banner7-content.slider-2 .sub-title {}
