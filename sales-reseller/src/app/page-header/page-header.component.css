@@ -746,7 +746,7 @@ img{
 }
 
 .box-cart .wishlist a > span #wish-img{
-	size: 120%;
+	/*size: 120%;*/
 }
 
 .box-cart .wishlist a > span,#cart-total {

@@ -14,6 +14,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HotComponent } from './hot/hot.component';
+import { Item1Component } from './item1/item1.component';
+import { RecomItemComponent } from './recom-item/recom-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HotComponent } from './hot/hot.component';
     ContactUsComponent,
     CollectionsComponent,
     ContactsComponent,
-    HotComponent
+    HotComponent,
+    Item1Component,
+    RecomItemComponent
   ],
   imports: [
     BrowserModule,
