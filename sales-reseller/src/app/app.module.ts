@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageFooterComponent } from './components/page-footer/page-footer.component';
@@ -11,6 +10,10 @@ import { BannerComponent } from './banner/banner.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { UserAgreeComponent } from './user-agree/user-agree.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CollectionsComponent } from './collections/collections.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { HotComponent } from './hot/hot.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,11 @@ import { UserAgreeComponent } from './user-agree/user-agree.component';
     BannerComponent,
     AboutUsComponent,
     MainPageComponent,
-    UserAgreeComponent
+    UserAgreeComponent,
+    ContactUsComponent,
+    CollectionsComponent,
+    ContactsComponent,
+    HotComponent
   ],
   imports: [
     BrowserModule,
