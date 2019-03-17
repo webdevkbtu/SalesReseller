@@ -228,3 +228,7 @@ a {
 .testimonial-container .owl-carousel.owl-theme .owl-nav div:hover {
 	color: #fff;
 }
+.pictures{
+	width: 100%;
+	height: 80%;
+}
