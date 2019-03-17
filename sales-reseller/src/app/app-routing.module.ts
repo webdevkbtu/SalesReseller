@@ -11,7 +11,7 @@ import {Item1Component} from './item1/item1.component';
 const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'user-agreement', component: UserAgreeComponent},
+  {path: 'user-agree', component: UserAgreeComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'item1', component: Item1Component}
 ];
