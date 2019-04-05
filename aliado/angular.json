@@ -1,9 +1,9 @@
 {
-  "$schema": ".//assets/js/@angular/cli/lib/config/schema.json",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sales-reseller": {
+    "aliado": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sales-reseller",
+            "outputPath": "dist/aliado",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,24 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/flickity/js/add-remove-cell.js",
-              "node_modules/flickity/js/animate.js",
-              "node_modules/flickity/js/cell.js",
-              "node_modules/flickity/js/drag.js",
-              "node_modules/flickity/js/flickity.js",
-              "node_modules/flickity/js/index.js",
-              "node_modules/flickity/js/lazyload.js",
-              "node_modules/flickity/js/page-dots.js",
-              "node_modules/flickity/js/player.js",
-              "node_modules/flickity/js/prev-next-button.js",
-              "node_modules/flickity/js/slide.js"
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -73,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sales-reseller:build"
+            "browserTarget": "aliado:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sales-reseller:build:production"
+              "browserTarget": "aliado:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sales-reseller:build"
+            "browserTarget": "aliado:build"
           }
         },
         "test": {
@@ -112,13 +97,13 @@
               "src/tsconfig.spec.json"
             ],
             "exclude": [
-              "**//assets/js/**"
+              "**/node_modules/**"
             ]
           }
         }
       }
     },
-    "sales-reseller-e2e": {
+    "aliado-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -127,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sales-reseller:serve"
+            "devServerTarget": "aliado:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "sales-reseller:serve:production"
+              "devServerTarget": "aliado:serve:production"
             }
           }
         },
@@ -140,12 +125,12 @@
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
             "exclude": [
-              "**//assets/js/**"
+              "**/node_modules/**"
             ]
           }
         }
       }
     }
   },
-  "defaultProject": "sales-reseller"
+  "defaultProject": "aliado"
 }
